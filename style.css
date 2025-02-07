@@ -9,11 +9,17 @@ h1 {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    font-size: 300%;
 /*centering*/
     text-align: center;
+    border: 2px solid powerderblue;
 }
 
 p {
     color: black;
+    text-align: center;
+}
+
+ul{
     text-align: center;
 }
