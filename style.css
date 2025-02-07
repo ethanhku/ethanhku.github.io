@@ -1,12 +1,16 @@
-body{
+body {
     color: rgb(204, 204, 255);
 }
 
-h1{
+h1 {
     color: black;
-    font-family: Playfair Display;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    /* Define a specific font weight or remove this line if not needed */
+    font-weight: normal;  /* or any other valid weight value like bold, 400, etc. */
+    font-style: normal;
 }
 
-p{
+p {
     color: black;
 }
