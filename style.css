@@ -34,9 +34,8 @@ p {
 .bullet-point{
     border: 1px solid black;
     padding-right: 15px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
     font-size: 110%;
 }
 
@@ -72,4 +71,8 @@ p {
 /*big monitor*/
 @media (min-width: 1280px){
 
+}
+
+.sun{
+    color: #FFD700;
 }
