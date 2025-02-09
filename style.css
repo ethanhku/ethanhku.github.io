@@ -33,7 +33,7 @@ p {
 
 .bullet-point{
     border: 1px solid black;
-    padding-right: 15px;
+    padding-right: 1px;
     display: flex;
     justify-content: center;
     font-size: 110%;
