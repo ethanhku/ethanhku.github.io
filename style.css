@@ -1,5 +1,5 @@
 body {
-    background-image: url('purple_gradient.jpg');
+    background-image: radial-gradient(#40627d, #00498d);
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    color: rgb(244, 226, 226);
+    color: rgb(238, 238, 238);
 }
 
 h1 {
