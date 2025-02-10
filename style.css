@@ -1,5 +1,10 @@
 body {
     background-color: rgb(204, 204, 255);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -12,31 +17,48 @@ h1 {
     font-size: 300%;
 /*centering*/
     text-align: center;
+    margin-bottom: 10px;
 }
 
 p {
     color: black;
     text-align: center;
     font-size: 110%;
+    margin-bottom: 8px;
 }
 
 .link{
     display: flex;
     justify-content: center;
     font-size: 100%;
+    margin-bottom: 10px 0;
 }
 
 .link a{
     text-decoration: none;
     color: rgb(42, 42, 254);
+    font-weight: bold;
 }
 
 .bullet-point{
     border: 1px solid black;
-    padding-right: 1px;
+    padding: 10px;
     display: flex;
     justify-content: center;
+    max-width: 80%;
     font-size: 110%;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.bullet-point ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.bullet-point li{
+    margin-bottom: 5px;
 }
 
 /*small phone*/
