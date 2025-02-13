@@ -18,12 +18,12 @@ h1 {
 /*centering*/
     text-align: center;
     margin-bottom: 10px;
-    font-size: 300%;
+    font-size: 250%;
 }
 
 p {
     text-align: center;
-    font-size: 110%;
+    font-size: 105%;
     margin-bottom: 8px;
 }
 
@@ -43,22 +43,38 @@ p {
 .bullet-point{
     border: 1px solid;
     padding: 10px;
+    padding-right: 60px;
     display: block;
-    justify-content: center;
     max-width: 80%;
-    font-size: 110%;
+    font-size: 100%;
     margin: 10px auto;
     border-radius: 8px;
+    flex: 1;
 }
 
 .bullet-point ul{
     list-style-type: disc;
     list-style-position: inside;
     padding-left: 20px;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 .bullet-point li{
     margin-bottom: 5px;
+}
+
+.side-by-side{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.column{
+    flex: 1;
+    text-align: left;
 }
 
 /*small phone*/
