@@ -50,6 +50,7 @@ p {
     margin: 10px auto;
     border-radius: 8px;
     flex: 1;
+    white-space: normal;
 }
 
 .bullet-point ul{
