@@ -1,5 +1,4 @@
 body {
-    background-image: radial-gradient(#40627d, #00498d);
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,11 +9,11 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    color: rgb(238, 238, 238);
+    color: rgb(0, 0, 0);
 }
 
 h1 {
-    color: rgb(212, 212, 212);
+    color: rgb(0, 0, 0);
 /*centering*/
     text-align: center;
     margin-bottom: 10px;
