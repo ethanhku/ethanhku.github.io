@@ -9,104 +9,88 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-<h1>Ethan Ku</h1>
-<p>Hi, my name is Ethan Ku, an Electrical Engineering student at the University of Michigan - Ann Arbor.</p>
-<p>Email: ethanhku@umich.edu</p>
-<p>Phone: 734-707-5667</p>
-
-<div class="link">
-    <a href="https://www.linkedin.com/in/ethanhku/" target="_blank">LinkedIn</a>
-</div>
-
-<p>My passion is in Computer Architecture, VLSI, and Embedded Systems.</p>
-<br>
-<p>Campus involvements:</p>
-<div class="bullet-point">
-    <ul>
-        <li>University of Michigan Solar Car Team - Microsystems Division <span class="sun">&#x2600</span></li>
-        <li>Revolution Chinese Yoyo Team &#x1FA80</li>
-        <li>Taiwanese-American Student Association - EBoard, Freshman Representative &#127481;&#127484;</li>
-    </ul>
-</div>
-
-<br>
-
-<div class="side-by-side">
-    <div class="column">
-        <p>Relevant Coursework:</p>
-    <div class="bullet-point">
+  <div class="container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">皓元</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="ideas.html">Ideas</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+      <hr class="sidebar-divider">
+      <div class="sidebar-section">
+        <div class="section-title">ORGANIZATIONS</div>
         <ul>
-            <li>EECS 200 (Electrical Engineering Systems Design I)</li>
-            <li>EECS 203 (Discrete Mathematics)</li>
-            <li>EECS 215 (Electronic Circuits)</li>
-            <li>EECS 216 (Signals and Systems)</li>
-            <li>EECS 280 (Programming and Intro. Data Structs.)</li> 
-            <li>ENGR 100 (Intro. to Aerospace Engineering)</li>
-            <li>TCHNCLCM 300 (Technical Communication for EE)</li>
-            <li>MATH 214 (Linear Algebra)</li>
+          <li><a href="solarcar.html">Solar Car</a></li>
+          <li><a href="atombots.html">Atombots</a></li>
+          <li><a href="revolution.html">Revolution</a></li>
+          <li><a href="tasa.html">TASA</a></li>
         </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="section-title">PROJECTS</div>
+        <ul>
+            <li><a href="https://ethanhku.github.io/yotonix.github.io/" target="_blank">Yotonix</a></li>
+        </ul>
+      </div>
+      <hr class="sidebar-divider">
+      <div class="sidebar-section">
+        <div class="section-title">CONTACT</div>
+        <ul>
+          <li><a href="mailto:ethanhku@umich.edu">Mail</a></li>
+          <li><a href="tel:+17347075667">Phone</a></li>
+          <li><a href="https://www.linkedin.com/in/ethanhku/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/ethan_h_ku/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main-content">
+      <div class="hero-section">
+        <div class="hero-header-row">
+          <div class="hero-greeting">
+            <span>Hello there, 歡迎!<sup class="pinyin">/huān yíng/</sup></span>
+          </div>
+          <div id="realtime-date" class="hero-date" style="float:right; color:#b0b0b0; font-size:1rem;"></div>
         </div>
-    </div>
-        
-    <div class="column">
-        <p>Tools:</p>
-        <div class="bullet-point">
-            <ul>
-                <li>Altium Designer</li>
-                <li>MATLAB</li>
-                <li>CATIA</li>
-                <li>Arduino</li>
-                <li>Office 365</li>
-            </ul>
-        </div>
-    </div>
-</div>
+        <h1 class="hero-title" style="font-size:2.8rem; font-weight:700; line-height:1.1; margin: 18px 0 0 0; color:#444;">Ethan is an engineer thinking about intelligent analog interfaces driven by novel interaction paradigms that feel natural, seamlessly blending with our daily intentions. Previously, he designed brake light and supermodule boards at UM Solar Car and works for Atombots Lab and Revolution Glowsuit. He's currently a student at the University of Michigan.</h1>
+      </div>
+    </main>
+  </div>
+  <script>
+    function updateDateTime() {
+      // Create a new Date object
+      const now = new Date();
 
-<br>
+      // Options for formatting the date
+      const options = {
+        weekday: 'long', // e.g., "Monday"
+        month: 'short',   // e.g., "Jan"
+        day: 'numeric',   // e.g., "29"
+        hour: 'numeric',  // e.g., "12"
+        minute: '2-digit',// e.g., "40"
+        hour12: true      // Use 12-hour format with AM/PM
+      };
 
-<p><u>Projects:</u></p>
-<p><strong>University of Michigan Solar Car Team:</strong></p>
-<p><i>Supermodule Boards:</i></p>
-<div class="bullet-point">
-    <ul>
-        <li>Routed PCB boards of 4 different shapes in Altium Designer, in order to unify 7 battery modules of 10 parallel 
-            and in-series cells each.</li>
-        <li>Collaboration with High Voltage battery division lead on board design</li>
-        <li>Race-critical task, allows 100% functionality of car battery, eliminated need for bus bars from previous design</li>
-    </ul>
-</div>
-<p><i>Brake Lighting Board:</i></p>
-<div class="bullet-point">
-    <ul>
-        <li>Routed a lighting board on Altium Designer to prototype multiple modules of a PCB board</li>
-        <li>Controls lighting systems placed around the car per regulations, complete with an MCU, MOSFETs, CAN transceiver, regulator, and oscillator.</li>
-        <li>Race-enabling task, ~50% increased efficiency in car lighting by allowing multiple lighting control boards to be 
-            placed around race car.</li>
-    </ul>
-</div>
+      // Format the date and time
+      const formattedDateTime = now.toLocaleDateString('en-US', options).replace(',', '');
 
-<br>
+      // Find the element by its ID and update its content
+      document.getElementById('realtime-date').innerHTML = formattedDateTime;
+    }
 
-<p><strong>Revolution Chinese Yoyo Team:</strong></p>
-<p><i>Glowsuits</i></p>
-<div class="bullet-point">
-    <ul>
-        <li>Created 5 new glowsuits for annual Yotonix performance</li>
-        <li>Used new, thicker EL wires that reduced breakage on-stage by 50% (previous wires were too thin to carry current consistently)</li>
-    </ul>
-</div>
+    // Update the date and time every second (1000 milliseconds)
+    setInterval(updateDateTime, 1000);
 
-<br><br>
-
-<p><strong>Works in progress:</strong></p>
-<div class="link">
-    <a href="https://ethanhku.github.io/yotonix.github.io/" target="_blank">AMCULT 352 Term Project Website</a>
-</div>
-<br><br>
-
+    // Call the function once immediately on page load
+    updateDateTime();
+  </script>
 </body>
 </html>
