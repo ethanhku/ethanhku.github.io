@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'SF Pro';
+  src: url('SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,7 +27,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /*font*/
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'SF Pro', 'SF Pro Display', 'SF Pro Text', 'San Francisco', 'Segoe UI', 'Arial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
