@@ -915,7 +915,8 @@ p {
 @media (min-width: 1280px) and (max-width: 1512px) {
   .sidebar { 
     width: 210px; 
-    padding: 20px 14px 14px 14px; 
+    padding: 20px 14px 14px 14px;
+    margin-left: 14px;
   }
   .logo { 
     font-size: 1.3rem; 
@@ -923,7 +924,7 @@ p {
   }
   .hero-section { 
     padding: 24px 24px 24px 24px; 
-    max-width: 900px; 
+    max-width: 1050px; 
   }
   .hero-title { 
     font-size: 6.5rem; 
