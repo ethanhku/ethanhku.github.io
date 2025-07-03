@@ -293,6 +293,7 @@ p {
 }
 
 .about-images {
+  margin-left: 70px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -315,6 +316,9 @@ p {
 }
 
 .about-info {
+  margin-left: -40px;
+  margin-right: 40px;
+  margin-top: 72px;
   flex: 2;
   max-width: 520px;
 }
@@ -995,7 +999,7 @@ p {
   .about-section { 
     margin-top: 90px; 
   }
-  .about-grid { 
+  .about-grid {
     gap: 10px; 
   }
   .about-text p { 
