@@ -1070,4 +1070,9 @@ p {
     font-size: 1.08rem;
     line-height: 1.7;
   }
+  .craft-tiles {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
 }
