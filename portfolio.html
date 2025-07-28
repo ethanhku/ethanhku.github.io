@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Ethan Ku</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">皓元</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="ideas.html">Ideas</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+      <hr class="sidebar-divider">
+      <div class="sidebar-section">
+        <div class="section-title">PROJECTS</div>
+        <ul>
+          <li><a href="https://ethanhku.github.io/yotonix.github.io/" target="_blank">Yotonix</a></li>
+        </ul>
+      </div>
+      <hr class="sidebar-divider">
+      <div class="sidebar-section">
+        <div class="section-title"><a href="contact.html" style="color: #b0b0b0; text-decoration: none;">CONTACT</a></div>
+        <ul>
+          <li><a href="mailto:ethanhku@umich.edu">Mail</a></li>
+          <li><a href="tel:+17347075667">Phone</a></li>
+          <li><a href="https://www.linkedin.com/in/ethanhku/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/ethanhku" target="_blank">Github</a></li>
+          <li><a href="https://www.instagram.com/ethan_h_ku/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main-content">
+      <h1>Portfolio</h1>
+      
+      <section class="portfolio-grid" style="margin-top:64px;">
+        <!-- Project 1: Supermodule PCB -->
+        <div class="portfolio-item" style="background:#fff; border-radius:16px; padding:32px; margin-bottom:32px; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+          <div style="display:flex; gap:32px; align-items:flex-start;">
+            <div style="flex:1;">
+              <h2 style="font-size:2rem; font-weight:600; color:#444; margin-bottom:16px;">Supermodule PCB Design</h2>
+              <p style="font-size:1.1rem; color:#666; line-height:1.6; margin-bottom:16px;">Led project for 4 Supermodule PCBs to unify 7 battery modules of 10 cells each in 4S2P hybrid configuration, eliminating bus bars from previous design for safety and allowing 100% functionality of high voltage battery.</p>
+              <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">Altium</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">C</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">Siemens NX</span>
+              </div>
+            </div>
+            <div style="flex:1; text-align:center;">
+              <img src="images/solarcar_logo.png" alt="Supermodule PCB" style="width:200px; border-radius:12px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Brake Light PCB -->
+        <div class="portfolio-item" style="background:#fff; border-radius:16px; padding:32px; margin-bottom:32px; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+          <div style="display:flex; gap:32px; align-items:flex-start;">
+            <div style="flex:1;">
+              <h2 style="font-size:2rem; font-weight:600; color:#444; margin-bottom:16px;">Brake Light PCB</h2>
+              <p style="font-size:1.1rem; color:#666; line-height:1.6; margin-bottom:16px;">Increased limited travel storage for race team by 50% by designing Brake Light PCB with solder jumper to manage multiple brake light systems with one board, complete with MCU, MOSFETs, CAN control, regulator, oscillator.</p>
+              <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">PCB Design</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">CAN Bus</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">Power Management</span>
+              </div>
+            </div>
+            <div style="flex:1; text-align:center;">
+              <img src="images/solarcar_logo.png" alt="Brake Light PCB" style="width:200px; border-radius:12px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Autonomous Robotics -->
+        <div class="portfolio-item" style="background:#fff; border-radius:16px; padding:32px; margin-bottom:32px; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+          <div style="display:flex; gap:32px; align-items:flex-start;">
+            <div style="flex:1;">
+              <h2 style="font-size:2rem; font-weight:600; color:#444; margin-bottom:16px;">Autonomous Robotics Research</h2>
+              <p style="font-size:1.1rem; color:#666; line-height:1.6; margin-bottom:16px;">Research assistant working on autonomous robotics and SLAM (Simultaneous Localization and Mapping) systems. Developing algorithms for robot navigation, sensor fusion, and real-time mapping.</p>
+              <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">C++</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">Python</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">ROS2</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">SLAM</span>
+              </div>
+            </div>
+            <div style="flex:1; text-align:center;">
+              <img src="images/atombots_logo.png" alt="Autonomous Robotics" style="width:200px; border-radius:12px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Phototech Systems -->
+        <div class="portfolio-item" style="background:#fff; border-radius:16px; padding:32px; margin-bottom:32px; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
+          <div style="display:flex; gap:32px; align-items:flex-start;">
+            <div style="flex:1;">
+              <h2 style="font-size:2rem; font-weight:600; color:#444; margin-bottom:16px;">Phototech Electrical Systems</h2>
+              <p style="font-size:1.1rem; color:#666; line-height:1.6; margin-bottom:16px;">Electrical engineer for phototech systems, specializing in LED integration and wearable technology. Working on custom lighting solutions, circuit design, and hardware integration for performance wearables.</p>
+              <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">LED Integration</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">Circuit Design</span>
+                <span style="background:#f0f0f0; padding:8px 16px; border-radius:8px; font-size:0.9rem; color:#666;">Wearable Tech</span>
+              </div>
+            </div>
+            <div style="flex:1; text-align:center;">
+              <img src="images/revolution_logo.jpg" alt="Phototech Systems" style="width:200px; border-radius:12px;">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html> 

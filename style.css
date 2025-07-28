@@ -35,7 +35,7 @@ body {
 }
 
 h1 {
-    color: rgb(0, 0, 0);
+    color: #444;
 /*centering*/
     text-align: center;
     margin-bottom: 10px;
@@ -628,6 +628,62 @@ p {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
   align-self: end;
+}
+
+.craft-tile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.craft-popup {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 24px;
+  width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 16px);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.craft-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: #fff;
+}
+
+.craft-tile-container:hover .craft-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.craft-popup h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+  margin: 0 0 12px 0;
+}
+
+.craft-popup p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.craft-popup p:last-child {
+  margin-bottom: 0;
 }
 
 /* Small phone */
