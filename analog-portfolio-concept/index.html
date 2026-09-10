@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Ethan Ku is an electrical engineering student at the University of Michigan focused on analog interfaces, embedded systems, and physical computing.">
+  <title>Ethan Ku — Electrical Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top"><span>皓元</span><span>Ethan Ku</span></a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#ideas">Ideas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="resume-link" href="Ethan_Ku_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="top" data-section>
+      <div class="hero-meta reveal">
+        <p>Hello there, 歡迎! <sup>/huān yíng/</sup></p>
+        <time id="realtime-date"></time>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="section-label">Ethan Ku · 古皓元</p>
+          <h1>Intelligent analog interfaces, designed around people.</h1>
+          <p>Ethan is an engineer focused on developing intelligent analog interfaces. He aims to create new interaction paradigms that feel natural and blend seamlessly with our daily intentions.</p>
+          <p>A student at the University of Michigan, Ethan previously designed brake-light and supermodule boards for the UM Solar Car team and works with the Atombots Lab and Revolution Glowsuit.</p>
+          <a class="button" href="#work">View the work <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="circuit-stage reveal" id="circuit-stage" aria-label="Reactive integrated circuit illustration">
+          <span class="circuit-label label-input" aria-hidden="true">IN / SENSE</span>
+          <span class="circuit-label label-output" aria-hidden="true">OUT / ACT</span>
+          <div class="circuit-axis" aria-hidden="true"></div>
+          <div class="chip" id="chip" aria-hidden="true">
+            <div class="pins pins-top"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="pins pins-right"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="pins pins-bottom"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="pins pins-left"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="chip-body">
+              <div class="die-grid"></div>
+              <div class="trace trace-one"></div><div class="trace trace-two"></div><div class="trace trace-three"></div>
+              <div class="die-core"><span>EK</span><small>A01</small></div>
+            </div>
+          </div>
+          <p class="circuit-caption" aria-hidden="true"><span>FIG. 01</span><span>Move your pointer</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section-shell" id="work" data-section>
+      <header class="section-heading reveal">
+        <p class="section-label">Work</p>
+        <h2>Projects &amp; roles</h2>
+        <p>Five places where I build hardware, software, experiences, and community.</p>
+      </header>
+
+      <div class="project-list">
+        <details class="project-row reveal" open>
+          <summary>
+            <span class="project-number">01</span>
+            <span class="logo-cell logo-solar"><img src="images/solarcar_logo.png" alt="UM Solar Car logo"></span>
+            <span class="project-title"><strong>UM Solar Car</strong><small>Project Lead · Embedded Engineer</small></span>
+            <span class="project-date">2024—Present</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="project-detail">
+            <div>
+              <p>Embedded engineer working on hardware and software electrical systems around the solar car.</p>
+              <p>Project lead for new battery supermodule PCBs for safety and capacity at high voltage, as well as an innovative brake-light PCB to increase limited travel storage.</p>
+              <p class="tools">Altium · C · Siemens NX</p>
+            </div>
+            <img src="images/solarcar.png" alt="Assembling a custom circuit board at an electronics workbench">
+          </div>
+        </details>
+
+        <details class="project-row reveal">
+          <summary>
+            <span class="project-number">02</span>
+            <span class="logo-cell logo-atom"><img src="images/atombots_logo.png" alt="Atombots Lab logo"></span>
+            <span class="project-title"><strong>Atombots Lab</strong><small>Research Assistant</small></span>
+            <span class="project-date">2025—Present</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="project-detail">
+            <div>
+              <p>Research assistant working on novel swarm robotics research.</p>
+              <p>Integrating real-time mapping sensors using SLAM and ROS 2, and developing electrical power distribution, communication, and battery-protection systems.</p>
+              <p class="tools">C++ · Python · ROS 2 · SLAM · Altium</p>
+            </div>
+            <div class="project-diagram swarm-diagram" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </details>
+
+        <details class="project-row reveal">
+          <summary>
+            <span class="project-number">03</span>
+            <span class="logo-cell logo-vti"><img src="images/vti_logo.png" alt="VTI Aerospace logo"></span>
+            <span class="project-title"><strong>VTI Aerospace</strong><small>Electrical Engineer</small></span>
+            <span class="project-date">2025—Present</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="project-detail">
+            <div>
+              <p>Electrical engineer with VTI Aerospace, working on the development of autonomous aerospace systems.</p>
+              <p>Currently developing a complete sensor package for autonomous drone flight across hardware and software systems.</p>
+              <p class="tools">Hardware · Software · Machine learning</p>
+            </div>
+            <div class="project-diagram radar-diagram" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+          </div>
+        </details>
+
+        <details class="project-row reveal">
+          <summary>
+            <span class="project-number">04</span>
+            <span class="logo-cell logo-revolution"><img src="images/revolution_logo.jpg" alt="Revolution Chinese Yoyo logo"></span>
+            <span class="project-title"><strong>Revolution Chinese Yoyo</strong><small>Glowsuit Electrical Engineer · Creative Chair</small></span>
+            <span class="project-date">2024—Present</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="project-detail">
+            <div>
+              <p>Electrical engineer for glowsuits and sound engineer in collaboration with sister club Photonix.</p>
+              <p>Specializing in LED integration and robust wearable technology for the annual Yotonix Glowsuit performance, as well as spearheading performance audio mixing.</p>
+              <p class="tools">Soldering · Heat shrink · Adobe Premiere Pro · Adobe Audition</p>
+              <a class="text-link" href="https://ethanhku.github.io/yotonix.github.io/" target="_blank" rel="noopener">Visit Yotonix ↗</a>
+            </div>
+            <img src="images/glowsuit.jpeg" alt="Glowsuits illuminated on an electronics workbench">
+          </div>
+        </details>
+
+        <details class="project-row reveal">
+          <summary>
+            <span class="project-number">05</span>
+            <span class="logo-cell logo-tasa"><img src="images/tasa_logo.jpg" alt="Taiwanese American Student Association logo"></span>
+            <span class="project-title"><strong>Taiwanese-American Student Association</strong><small>Outreach Chair</small></span>
+            <span class="project-date">2024—Present</span>
+            <span class="disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="project-detail">
+            <div>
+              <p>Outreach Chair organizing events in collaboration with other student organizations to promote Taiwanese culture and heritage on campus.</p>
+              <p>Planning cultural festivals, workshops, and community outreach programs.</p>
+              <p class="tools">Event planning · Cultural programming</p>
+            </div>
+            <img src="images/springfest.jpeg" alt="Students gathering at a campus cultural event">
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="portfolio section-shell" id="portfolio" data-section>
+      <header class="section-heading reveal">
+        <p class="section-label">Portfolio &amp; CV</p>
+        <h2>Documents</h2>
+        <p>Open either document here, or download the original file.</p>
+      </header>
+
+      <div class="document-list">
+        <details class="document-row reveal">
+          <summary>
+            <span><small>01 / Presentation</small><strong>Project portfolio</strong></span>
+            <span class="document-actions"><span>Open</span><i aria-hidden="true"></i></span>
+          </summary>
+          <div class="document-viewer">
+            <iframe data-src="https://view.officeapps.live.com/op/embed.aspx?src=https://ethanhku.github.io/EthanKuPortfolio.pptx&amp;wdAr=16:9&amp;wdEmbedCode=0" title="Ethan Ku portfolio presentation"></iframe>
+            <p>If the presentation does not appear, <a href="EthanKuPortfolio.pptx" target="_blank" rel="noopener">download it here</a>.</p>
+          </div>
+        </details>
+
+        <details class="document-row reveal">
+          <summary>
+            <span><small>02 / PDF</small><strong>Résumé</strong></span>
+            <span class="document-actions"><span>Open</span><i aria-hidden="true"></i></span>
+          </summary>
+          <div class="document-viewer">
+            <iframe data-src="Ethan_Ku_Resume.pdf" title="Ethan Ku résumé"></iframe>
+            <p>If the résumé does not appear, <a href="Ethan_Ku_Resume.pdf" target="_blank" rel="noopener">download it here</a>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about" data-section>
+      <div class="about-title reveal">
+        <p class="section-label">About</p>
+        <p class="about-fade">Let that fog settle...</p>
+        <h2>Ethan Ku</h2>
+        <p class="chinese-name">古皓元 <span>/gǔ hào yuán/</span></p>
+      </div>
+
+      <div class="about-collage reveal" aria-label="A selection of Ethan's photographs">
+        <img src="images/yoyo.JPG" alt="Ethan performing Chinese yoyo">
+        <img src="images/tv.jpeg" alt="A television installation">
+        <img src="images/pissarro.jpeg" alt="A painting by Pissarro">
+        <img src="images/bean.jpeg" alt="A reflective sculpture">
+      </div>
+
+      <div class="about-info reveal">
+        <p class="section-label">Info</p>
+        <div>
+          <p>I'm an undergraduate student at the University of Michigan, studying Electrical Engineering and graduating in 2027.</p>
+          <p>I design spaces and systems that people can enjoy, always striving to curate an engaging experience as they navigate the world.</p>
+          <p>During my sophomore year, I decided to shift my career towards designing for analog computing spaces because of a desire to work at more modern and holistic scales. While computing and architecture slowly evolve, still, at the heart of these disciplines are what makes design valuable—it fulfills people's lives through emotion, functionality, and purpose.</p>
+        </div>
+      </div>
+
+      <div class="education reveal">
+        <div>
+          <p class="section-label">Education</p>
+          <h3>University of Michigan, Ann Arbor<br>College of Engineering</h3>
+          <p class="education-date">2024—2027</p>
+          <p>Bachelor of Science in Engineering — Electrical Engineering</p>
+          <p>Minor: Computer Science</p>
+        </div>
+        <figure><img src="images/umich-campus.jpg" alt="University of Michigan campus during spring"><figcaption>Michigan campus during the spring</figcaption></figure>
+      </div>
+
+      <div class="foundations reveal">
+        <p class="section-label">Design foundations</p>
+        <div>
+          <article>
+            <h3>Great Taste</h3>
+            <p>I believe that great taste, as defined by Ira Glass, is developed through an interdisciplinary study of design—art, architecture, fashion, etc. Beyond interfaces, understanding how design works, looks, and feels in the real world helps me as an engineer develop a better intuition of what feels right. I'm not afraid of trying new things and always strive towards “best-in-class.”</p>
+          </article>
+          <article>
+            <h3>Future of technology</h3>
+            <p>The future of personal computing is astounding to me as our interfaces more seamlessly blend and understand our daily intentions. As human-computer interfaces get better at understanding human gesture, I believe their role is to help us better interact in the physical world in front of people, and I'm curious about how we can make such technology seem invisible.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="interests reveal">
+        <div class="interest-copy">
+          <p class="section-label">Things I love to do</p>
+          <h3>Traveling to new cities<br>Learning new instruments<br>Tea in Jiufen, Taiwan</h3>
+        </div>
+        <div class="interest-gallery">
+          <figure><img src="images/violin.jpg" alt="Ethan holding a violin"><figcaption>Violin</figcaption></figure>
+          <figure><img src="images/mackinac.jpg" alt="Friends in northern Michigan"><figcaption>Northern Michigan</figcaption></figure>
+          <figure><img src="images/taiwan.jpg" alt="A street in Taiwan"><figcaption>Taiwan</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideas section-shell" id="ideas" data-section>
+      <p class="section-label reveal">Ideas</p>
+      <div class="ideas-row reveal">
+        <h2>Notes in progress.</h2>
+        <p>This is a placeholder for the Ideas page. New writing and portfolio notes are coming soon.</p>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact" data-section>
+      <header class="section-heading reveal">
+        <p class="section-label">Contact</p>
+        <h2>Let’s talk.</h2>
+        <p>Professional inquiries, project discussions, or general questions.</p>
+      </header>
+
+      <div class="contact-list">
+        <a class="contact-row reveal" href="mailto:ethanhku@umich.edu"><span>Email<small>For professional inquiries or project discussions.</small></span><strong>ethanhku@umich.edu</strong><i>↗</i></a>
+        <a class="contact-row reveal" href="tel:+17347075667"><span>Phone<small>For urgent matters or if you prefer to call.</small></span><strong>+1 (734) 707-5667</strong><i>↗</i></a>
+        <a class="contact-row reveal" href="https://www.linkedin.com/in/ethanhku/" target="_blank" rel="noopener"><span>LinkedIn<small>Connect professionally and stay updated with my work.</small></span><strong>linkedin.com/in/ethanhku</strong><i>↗</i></a>
+        <a class="contact-row reveal" href="https://github.com/ethanhku" target="_blank" rel="noopener"><span>GitHub<small>View my code projects and technical contributions.</small></span><strong>github.com/ethanhku</strong><i>↗</i></a>
+        <a class="contact-row reveal" href="https://www.instagram.com/ethan_h_ku/" target="_blank" rel="noopener"><span>Instagram<small>Behind-the-scenes glimpses of projects and life.</small></span><strong>@ethan_h_ku</strong><i>↗</i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Ethan Ku · Electrical Engineer</span>
+    <span>Ann Arbor, MI · <time id="year"></time></span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>

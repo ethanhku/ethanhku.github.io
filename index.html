@@ -12,18 +12,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <style>
+      /* Ink bleed splash styles — scoped to this page only */
+      .ink-splash {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .ink-name-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0 48px;
+      }
+
+      .ink-name {
+        font-family: 'SF Pro', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: clamp(5rem, 11vw, 10rem);
+        font-weight: 900;
+        line-height: 1.05;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        letter-spacing: -0.02em;
+        text-transform: lowercase;
+      }
+
+      .ink-name-1 {
+        color: #111;
+        /* Crisp, solid black — no filter */
+      }
+
+      .ink-name-2 {
+        color: #8a7e74;
+        filter: url(#ink-bleed-light);
+      }
+
+      .ink-name-3 {
+        color: #5c1a2a;
+        filter: url(#ink-bleed-heavy);
+      }
+
+      /* Reduced motion fallback */
+      @media (prefers-reduced-motion: reduce) {
+        .ink-name-2,
+        .ink-name-3 {
+          filter: none;
+          opacity: 0.7;
+        }
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 900px) {
+        .ink-splash {
+          min-height: auto;
+          padding: 48px 0;
+        }
+        .ink-name-stack {
+          padding: 0 24px;
+        }
+        .ink-name {
+          font-size: clamp(2.5rem, 14vw, 5rem);
+        }
+      }
+    </style>
 </head>
 
 <body>
+  <!-- Hidden SVG filter definitions for ink bleed effects -->
+  <svg style="position:absolute;width:0;height:0;" aria-hidden="true">
+    <defs>
+      <!-- Light ink bleed: subtle edge feathering -->
+      <filter id="ink-bleed-light" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="2" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+        <feGaussianBlur in="displaced" stdDeviation="0.6" />
+      </filter>
+      <!-- Heavy ink bleed: maximum dissolution -->
+      <filter id="ink-bleed-heavy" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="5" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+        <feGaussianBlur in="displaced" stdDeviation="1.4" />
+      </filter>
+    </defs>
+  </svg>
+
   <div class="container">
     <nav class="sidebar">
       <div class="sidebar-header">
         <a href="index.html" class="logo">皓元</a>
       </div>
       <ul class="nav-links">
+        <li><a href="bio.html">Bio</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="cv.html">CV</a></li>
+        <li><a href="cv.html">Resume</a></li>
         <li><a href="ideas.html">Ideas</a></li>
       </ul>
       <hr class="sidebar-divider">
@@ -45,146 +131,13 @@
         </ul>
       </div>
     </nav>
-    <main class="main-content">
-      <div class="hero-section">
-        <div class="hero-header-row">
-          <div class="hero-greeting">
-            <span>Hello there, 歡迎!<sup class="pinyin">/huān yíng/</sup></span>
-          </div>
-          <div id="realtime-date" class="hero-date" style="float:right; color:#b0b0b0; font-size:1rem;"></div>
-        </div>
-        <h1 class="hero-title" style="font-size:2.8rem; font-weight:700; line-height:1.1; margin: 18px 0 0 0; color:#444;">Ethan is an engineer focused on developing intelligent analog interfaces. He aims to create new interaction paradigms that feel natural and blend seamlessly with our daily intentions.</h1>
-        <h1 class="hero-title" style="font-size:2.8rem; font-weight:700; line-height:1.1; margin: 18px 0 0 0; color:#444;">A student at the University of Michigan, Ethan previously designed brake light and supermodule boards for the UM Solar Car team and works with the Atombots Lab and Revolution Glowsuit.</h1>
+    <main class="main-content ink-splash">
+      <div class="ink-name-stack">
+        <h1 class="ink-name ink-name-1">ethan ku</h1>
+        <h1 class="ink-name ink-name-2" aria-hidden="true">ethan ku</h1>
+        <h1 class="ink-name ink-name-3" aria-hidden="true">ethan ku</h1>
       </div>
-      <!-- CRAFT Tiles Section -->
-      <section class="craft-section" style="margin-top:48px;">
-        <!-- <div class="craft-heading" style="font-size:0.95rem; color:#b0b0b0; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; margin-bottom:24px;">Craft</div> -->
-        <div class="craft-tiles" style="display:flex; gap:32px;">
-          <!-- Solar Car Tile -->
-          <div class="craft-tile-container">
-          <div class="craft-tile" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px 0 rgba(80,60,180,0.07); flex:1; min-width:320px; max-width:360px; display:flex; flex-direction:column; justify-content:space-between; padding:40px 32px 24px 32px;">
-            <img src="images/solarcar_logo.png" alt="UM Solar Car Logo" style="width:320px; margin-bottom:40px; align-self:center;">
-            <div style="margin-top:auto;">
-              <div style="font-size:1.15rem; font-weight:600; color:#444;">UM Solar Car</div>
-                <div style="font-size:1rem; color:#888;">Project Lead</div>
-              </div>
-              <div style="font-size:1rem; color:#b0b0b0; text-align:right; margin-top:16px;">2024-Present</div>
-            </div>
-            <div class="craft-popup">
-              <h3>UM Solar Car Team</h3>
-              <p>Embedded engineer working on hardware and software electrical systems around the solar car.</p>
-              <p>Project lead for new battery supermodule PCBs for safety and capacity at high voltage, as well as innovative brake light PCB to increase limited travel storage.</p>
-              <br>
-              <p>Altium, C, Siemens NX</p>
-            </div>
-          </div>
-          <!-- Atombots Tile -->
-          <div class="craft-tile-container">
-          <div class="craft-tile" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px 0 rgba(80,60,180,0.07); flex:1; min-width:320px; max-width:360px; display:flex; flex-direction:column; justify-content:space-between; padding:40px 32px 24px 32px;">
-            <img src="images/atombots_logo.png" alt="Atombots Logo" style="width:190px; margin-bottom:40px; align-self:center;">
-            <div style="margin-top:auto;">
-                <div style="font-size:1.15rem; font-weight:600; color:#444;">Atombots Lab</div>
-                <div style="font-size:1rem; color:#888;">Research Assistant</div>
-              </div>
-              <div style="font-size:1rem; color:#b0b0b0; text-align:right; margin-top:16px;">2025-Present</div>
-            </div>
-            <div class="craft-popup">
-              <h3>Atombots Lab</h3>
-              <p>Research assistant working on novel swarm robotics research.</p>
-              <p>Integrating real-time mapping sensors using SLAM and ROS2, and developing electrical power distribution, communication, and battery protection systems.</p>
-              <br>
-              <p>C++, Python, ROS2, SLAM, Altium</p>
-            </div>
-          </div>
-          <!-- VTI Tile -->
-          <div class="craft-tile-container">
-            <div class="craft-tile" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px 0 rgba(80,60,180,0.07); flex:1; min-width:320px; max-width:360px; display:flex; flex-direction:column; justify-content:space-between; padding:40px 32px 24px 32px;">
-              <img src="images/vti_logo.png" alt="VTI Logo" style="width:200px; margin-bottom:40px; align-self:center;">
-              <div style="margin-top:auto;">
-                <div style="font-size:1.15rem; font-weight:600; color:#444;">VTI Aerospace</div>
-                <div style="font-size:1rem; color:#888;">Electrical Engineer</div>
-            </div>
-            <div style="font-size:1rem; color:#b0b0b0; text-align:right; margin-top:16px;">2025-Present</div>
-            </div>
-            <div class="craft-popup">
-              <h3>VTI Aerospace</h3>
-              <p>Electrical engineer with VTI Aerospace, working on development of autonomous aerospace systems.</p>
-              <p>Currently developing a complete sensor package for autonomous flight of a drone, working on hardware and software systems.</p>
-              <br>
-              <p>Hardware, Software, Machine Learning</p>
-            </div>
-          </div>
-        </div>
-        <!-- Second Row of Tiles -->
-        <div class="craft-tiles" style="display:flex; gap:32px; margin-top:32px; justify-content: center;">
-          <!-- Revolution Tile -->
-          <div class="craft-tile-container">
-          <div class="craft-tile" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px 0 rgba(80,60,180,0.07); flex:1; min-width:320px; max-width:360px; display:flex; flex-direction:column; justify-content:space-between; padding:40px 32px 24px 32px;">
-            <img src="images/revolution_logo.jpg" alt="Revolution Logo" style="width:200px; margin-bottom:40px; align-self:center;">
-            <div style="margin-top:auto;">
-                <div style="font-size:1.15rem; font-weight:600; color:#444;">Revolution Chinese Yoyo</div>
-                <div style="font-size:1rem; color:#888;">Glowsuit Electrical Engineer, Creative Chair</div>
-              </div>
-              <div style="font-size:1rem; color:#b0b0b0; text-align:right; margin-top:16px;">2024-Present</div>
-            </div>
-            <div class="craft-popup">
-              <h3>Revolution Chinese Yoyo</h3>
-              <p>Electrical engineer for glowsuits and sound engineer in collaboration with sister club Photonix.</p>
-              <p>Specializing in LED integration and robust wearable technology for annual Yotonix Glowsuit performance, as well as spearheading performance audio mixing.</p>
-              <br>
-              <p>Solder, Heat Shrink, Adobe Premiere Pro, Adobe Audition</p>
-            </div>
-          </div>
-          <!-- TASA Tile -->
-          <div class="craft-tile-container">
-            <div class="craft-tile" style="background:#fff; border-radius:24px; box-shadow:0 4px 24px 0 rgba(80,60,180,0.07); flex:1; min-width:320px; max-width:360px; display:flex; flex-direction:column; justify-content:space-between; padding:40px 32px 24px 32px;">
-              <img src="images/tasa_logo.jpg" alt="TASA Logo" style="width:200px; margin-bottom:40px; align-self:center;">
-              <div style="margin-top:auto;">
-                <div style="font-size:1.15rem; font-weight:600; color:#444;">Taiwanese-American Student Association</div>
-                <div style="font-size:1rem; color:#888;">Outreach Chair</div>
-            </div>
-            <div style="font-size:1rem; color:#b0b0b0; text-align:right; margin-top:16px;">2024-Present</div>
-            </div>
-            <div class="craft-popup">
-              <h3>Taiwanese American Student Association</h3>
-              <p>Outreach Chair organizing events in collaboration with other student organizations to promote Taiwanese culture and heritage on campus.</p>
-              <p>Planning cultural festivals, workshops, and community outreach programs.</p>
-              <br>
-              <p>Event Planning, Cultural Programming</p>
-            </div>
-          </div>
-          
-        </div>
-      </section>
     </main>
   </div>
-  <script>
-    function updateDateTime() {
-      // Create a new Date object
-      const now = new Date();
-
-      // Options for formatting the date
-      const options = {
-        weekday: 'long', // e.g., "Monday"
-        month: 'short',   // e.g., "Jan"
-        day: 'numeric',   // e.g., "29"
-        hour: 'numeric',  // e.g., "12"
-        minute: '2-digit',// e.g., "40"
-        hour12: true      // Use 12-hour format with AM/PM
-      };
-
-      // Format the date and time
-      const formattedDateTime = now.toLocaleDateString('en-US', options).replace(',', '');
-
-      // Find the element by its ID and update its content
-      document.getElementById('realtime-date').innerHTML = formattedDateTime;
-    }
-
-    // Update the date and time every second (1000 milliseconds)
-    setInterval(updateDateTime, 1000);
-
-    // Call the function once immediately on page load
-    updateDateTime();
-  </script>
 </body>
 </html>

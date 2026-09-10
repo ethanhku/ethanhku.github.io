@@ -110,7 +110,7 @@ p {
 
 .sidebar {
   width: 260px;
-  background: #fafafa;
+  background: linear-gradient(180deg, #fdf8f3 0%, #f5f3f7 50%, #ece4f0 100%);
   border-right: 1px solid #eee;
   padding: 32px 24px 24px 24px;
   display: flex;
