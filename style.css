@@ -635,6 +635,11 @@ p {
   display: inline-block;
 }
 
+.craft-tile-container > .craft-tile {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 .craft-popup {
   visibility: hidden;
   opacity: 0;

@@ -1,0 +1,74 @@
+/* ---------- Lenis (recommended base styles) ---------- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ---------- Pre-animation state ---------- */
+/* Hide the page until GSAP takes over, so nothing flashes before the intro.
+   The inline <head> script removes .anim-pending after 2.5s as a fallback. */
+html.anim-pending .sidebar,
+html.anim-pending .main-content {
+  visibility: hidden;
+}
+
+/* ---------- Sidebar link underline ---------- */
+.nav-links a,
+.sidebar-section ul a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 1px;
+  transition: color 0.2s, background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-links a:hover,
+.sidebar-section ul a:hover {
+  background-size: 100% 1px;
+}
+
+/* ---------- Contact page arrows ---------- */
+.main-content a span:last-child {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.main-content a:hover span:last-child {
+  transform: translate(3px, -3px);
+}
+
+/* Keep split words from breaking between letters */
+.split-word {
+  white-space: nowrap;
+}
+
+/* SplitText line masks shouldn't clip descenders */
+.split-line-mask {
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.anim-pending .sidebar,
+  html.anim-pending .main-content {
+    visibility: visible;
+  }
+  .nav-links a,
+  .sidebar-section ul a,
+  .main-content a span:last-child {
+    transition: none;
+  }
+}
